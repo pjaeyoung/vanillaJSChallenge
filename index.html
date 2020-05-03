@@ -4,15 +4,38 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="src/styles.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+      integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+      crossorigin="anonymous"
+    />
     <title>Momentum</title>
   </head>
   <body>
     <section class="clock">
       <h1>00:00</h1>
     </section>
-    <section class="greeting"></section>
-    <section class="todo"></section>
-    <section class="weather"></section>
-    <script type="text/javascript" src="index.js"></script>
+    <section class="greeting">
+      <h3 class="greeting__message"></h3>
+      <form class="greeting__form">
+        <input class="greeting__input" type="text" placeholder="What is your name?" />
+      </form>
+    </section>
+    <section class="todo hide">
+      <form class="todo__form">
+        <input class="todo__input" type="text" placeholder="What are you gonna do?" />
+      </form>
+      <ul class="todo-list"></ul>
+    </section>
+    <section class="weather">
+      <span class="weather__description"></span>
+    </section>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script type="text/javascript" src="weather.js"></script>
+    <script type="text/javascript" src="background.js"></script>
+    <script type="text/javascript" src="todo.js"></script>
+    <script type="text/javascript" src="greeting.js"></script>
+    <script type="text/javascript" src="clock.js"></script>
   </body>
 </html>

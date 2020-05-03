@@ -1,7 +1,7 @@
 const clock = document.querySelector(".clock h1")
 
 function convertTimeFormatFrom(oldValue) {
-  return oldValue < 10 ? `0${oldValue.getHours()}` : oldValue
+  return oldValue < 10 ? `0${oldValue}` : oldValue
 }
 
 function setTime() {
@@ -12,7 +12,8 @@ function setTime() {
 }
 
 function showClock() {
+  setTime()
   setInterval(setTime, 1000)
 }
 
-export default showClock
+showClock()
